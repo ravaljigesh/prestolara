@@ -35,3 +35,7 @@ Via ZIP:
 Next Follow default prestashop installation screen
 
 - Post installation visit http://www.website.com/prestolara/jigesh to see if the url works
+
+# Demo or Example
+
+https://presta.jigeshraval.com/prestolara/jigesh 
