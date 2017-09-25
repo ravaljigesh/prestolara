@@ -33,3 +33,5 @@ Via ZIP:
 - Upload and extract it. 
 
 Next Follow default prestashop installation screen
+
+- Post installation visit http://www.website.com/prestolara/jigesh to see if the url works
