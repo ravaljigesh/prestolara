@@ -4,8 +4,7 @@
     "type": "project",
     "require": {
         "php": ">=5.4",
-        "symfony/symf
-        ony": "~2.8.6",
+        "symfony/symfony": "~2.8.6",
         "defuse/php-encryption": "~2.0.1",
         "doctrine/dbal": "~2.5.3",
         "doctrine/cache": "~1.6|~1.5",
