@@ -1,0 +1,33 @@
+language: php
+
+dist: trusty
+
+php:
+  - 7.0
+  - 7.1
+  - nightly
+
+env:
+  - PHPUNIT_VERSION=6.0.x-dev
+  - PHPUNIT_VERSION=6.1.x-dev
+  - PHPUNIT_VERSION=6.2.x-dev
+  - PHPUNIT_VERSION=6.3.x-dev
+
+
+script:
+  - ./bin/phpunit --coverage-clover=build/logs/clover.xml
+
+matrix:
+  allow_failures:
+    - php: nightly
+    - env: PHPUNIT_VERSION=6.3.x-dev
+  exclude:
+
+install:
+  - composer require --dev phpunit/phpunit:${PHPUNIT_VERSION}
+  - composer install --dev
+
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover build/logs/clover.xml
+  - CODECLIMATE_REPO_TOKEN=74f9cd376c20c19d09d6c73e4bac9dad48209fa7f3fb44b650ec7d70db81a51a ./bin/test-reporter
