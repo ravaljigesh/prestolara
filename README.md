@@ -1,3 +1,8 @@
+# Mix of 
+- PrestaShop V.1.7.0.2
+- Illuminate V.5.2.2
+- Eloquent Relationships
+
 # PrestoLara
 Laravel and Illuminate flavour into PrestaShop
 
